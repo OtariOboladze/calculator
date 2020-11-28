@@ -1,22 +1,24 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <form action="">
-      <input type="text" id="first" name="fname"  />
-      <select name="cars" id="cars">
-        <option id="plus">+</option>
-        <option id="minus">-</option>
-        <option id="multiply">*</option>
-        <option id="devide">/</option>
-        <option id="rest">%</option>
-      </select>
-      <input type="text" id="fname" name="fname" value="John" />
-      <input type="text" id="fname" name="fname" value="John" />
-    </form>
-    <button id="calculate" onclick=calculate()>calculate</button>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+
+    <body>
+        <form action="">
+            <input type="number" id="first" placeholder="solo los numeros" />
+            <select id="operators">
+                <option id="plus">+</option>
+                <option id="minus">-</option>
+                <option id="multiply">*</option>
+                <option id="devide">/</option>
+                <option id="rest">%</option>
+            </select>
+            <input type="number" id="second" placeholder="solo los numeros"  />
+            <p>=</p>
+            <input type="text" id="fname" name="fname" value="John" />
+        </form>
+        <button id="calculate" onclick="calculate()">calculate</button>
+    </body>
 </html>
