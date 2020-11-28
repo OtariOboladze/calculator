@@ -9,15 +9,18 @@
                 let second = document.getElementById("second").value;
                 let operator = document.getElementById("operators");
                 let operator_value = operator[operator.selectedIndex].value;
-                document.getElementById("result").innerText = eval(parseFloat(first) + operator_value + parseFloat(second));
-                console.log(operator);
+                if (operator_value == "/" && second == 0) {
+                    alert("no se puede utilizar división o módulo con cero");
+                } else {
+                    document.getElementById("result").innerText = eval(parseFloat(first) + operator_value + parseFloat(second));
+                }
             }
         </script>
     </head>
 
     <body>
         <form id="form">
-            <input type="number" id="first" placeholder="solo los numeros" value="first_input"/>
+            <input type="number" id="first" placeholder="solo los numeros" value="first_input" />
             <select id="operators">
                 <option value="choise">Operación</option>
                 <option value="+">+</option>
@@ -28,7 +31,7 @@
             </select>
             <input type="number" id="second" placeholder="solo los numeros" value="second_input" />
             <p>=</p>
-            <p id="result">RESULT</p>
+            <p id="result">RESULTADO</p>
         </form>
         <button id="calculate" onclick="calculate()">Calcular</button>
     </body>
